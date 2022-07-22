@@ -1,6 +1,6 @@
 Feature:Home page related scenarios
 
-  @ADVSYS-6
+  @ADVSYS-6 @smoke
   Scenario Outline: Verify following link is displayed
     Then Verify "<linkText>" link is displayed
     Examples:
@@ -9,7 +9,7 @@ Feature:Home page related scenarios
       | Job Career |
       | Feedbacks  |
 
-  @ADVSYS-6
+  @ADVSYS-6 @smoke
   Scenario Outline: Verify Language section user click dropdown and able to see English, Spanish, French
     Then Verify "<linkText>" link is enabled
     Examples:
@@ -18,6 +18,7 @@ Feature:Home page related scenarios
       | Spanish   |
       | French    |
 
+  @ADVSYS-9 @smoke
   Scenario Outline:ADVSYS-9. Verify Page Navigation Bar has following links displayed
     Then Verify "<linkText>" link is displayed
     Examples:
@@ -30,6 +31,7 @@ Feature:Home page related scenarios
       | Join Us    |
       | Contact Us |
 
+  @ADVSYS-9 @smoke
   Scenario Outline:ADVSYS-9.Verify Page Navigation Bar links take to corresponding pages by verifying title
     When User clicks on "<link>"
     And User switches to the next window
@@ -44,7 +46,7 @@ Feature:Home page related scenarios
       | Join Us    | Advance Systems - Join       |
       | Contact Us | Advance Systems - Contact Us |
 
-  @ADVSYS-12
+  @ADVSYS-12 @smoke
   Scenario Outline: Verify with 5 items section displayed as a headers and descriptions under it.
     Then Verify "<Header>" headers is displayed
     Examples:
