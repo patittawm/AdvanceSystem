@@ -18,7 +18,7 @@ Feature:Home page related scenarios
       | Spanish   |
       | French    |
 
-  @ADVSYS-9 @smoke
+  @ADVSYS-9
   Scenario Outline:ADVSYS-9. Verify Page Navigation Bar has following links displayed
     Then Verify "<linkText>" link is displayed
     Examples:
@@ -31,7 +31,7 @@ Feature:Home page related scenarios
       | Join Us    |
       | Contact Us |
 
-  @ADVSYS-9 @smoke
+  @ADVSYS-9
   Scenario Outline:ADVSYS-9.Verify Page Navigation Bar links take to corresponding pages by verifying title
     When User clicks on "<link>"
     And User switches to the next window

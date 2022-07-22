@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>automation-practice-cucumberBDD</artifactId>
+    <artifactId>AdvanceSystemTeam2</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -58,7 +58,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.18.1</version>
                 <configuration>
-                    <forkCount>1</forkCount>
+                    <forkCount>4</forkCount>
                     <includes>
                         <include>**/*CukesRunner.class</include>
                     </includes>
@@ -76,7 +76,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>Automation Practice TLA</projectName>
+                            <projectName>AdvanceSystemTeam2</projectName>
                             <outputDirectory>target/cucumber-reports/jenkins-report</outputDirectory>
                             <cucumberOutput>target/cucumber-reports/cucumber.json</cucumberOutput>
                             <skip>false</skip>
