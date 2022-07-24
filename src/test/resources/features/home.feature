@@ -11,6 +11,7 @@ Feature:Home page related scenarios
 
   @ADVSYS-6 @smoke
   Scenario Outline: Verify Language section user click dropdown and able to see English, Spanish, French
+    When user can click dropdown for change language
     Then Verify "<linkText>" link is enabled
     Examples:
       | linkText  |
@@ -48,7 +49,7 @@ Feature:Home page related scenarios
 
   @ADVSYS-12 @smoke
   Scenario Outline: Verify with 5 items section displayed as a headers and descriptions under it.
-    Then Verify "<Header>" headers is displayed
+    Then Verify headers as "<Header>" is displayed and description under
     Examples:
       | Header                      |
       | Leadership Development      |
@@ -56,3 +57,15 @@ Feature:Home page related scenarios
       | Reward & Benefits           |
       | Employee & Industrial       |
       | Delivering Excellent        |
+
+  @ADVSYS-12
+  Scenario Outline: Verify 5 section displayed as a headers and descriptions under it.
+    When User see headers as "<headerText>"
+    Then Verify "<description>" is displayed under header
+    Examples:
+      | headerText                      | description |
+      | Leadership Development      |  Lorem Ipsum is simply dummy text of the printing and typesetting industry.             |
+      | Capability Building         |  Lorem Ipsum is simply dummy text of the printing and typesetting industry.            |
+      | Reward & Benefits           |  Lorem Ipsum is simply dummy text of the printing and typesetting industry.              |
+      | Employee & Industrial       |  Lorem Ipsum is simply dummy text of the printing and typesetting industry.              |
+      | Delivering Excellent        |  Lorem Ipsum is simply dummy text of the printing and typesetting industry.              |

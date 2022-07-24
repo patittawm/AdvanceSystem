@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         glue = {"step_definitions"},
         stepNotifications = true,
         dryRun = true,
-        tags = "@smoke"
+        tags = "@ADVSYS-12"
 )
 public class CukesRunner {
 }

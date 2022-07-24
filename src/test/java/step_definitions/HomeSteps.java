@@ -30,6 +30,10 @@ public class HomeSteps implements CommonPage {
         WebDriverManager.getDriver().findElement(By.xpath(String.format(XPATH_TEMPLATE_LINKTEXT, linkLanguage)));
     }
 
+    @Then("user can click dropdown for change language")
+    public void userCanClickDropdownForChangeLanguage() {
+        WebDriverManager.click(homePage.dropdownLanguage);
+    }
     
     @When("User clicks on {string}")
     public void user_clicks_on(String linkBtn) {
@@ -38,6 +42,7 @@ public class HomeSteps implements CommonPage {
 
     @When("User switches to the next window")
     public void user_switches_to_the_next_window() {
+
         SeleniumUtils.switchToNextWindow();
     }
 
@@ -57,6 +62,53 @@ public class HomeSteps implements CommonPage {
         WebDriverManager.getDriver().findElement(By.xpath(String.format(XPATH_TEMPLATE_TEXT, desc)));
     }
 
+    @Then("Verify headers as {string} is displayed and description under")
+    public void verifyHeadersAsIsDisplayedAndDescriptionUnder(String header) {
+        Assert.assertTrue(WebDriverManager.isDisplayed(By.xpath(String.format(XPATH_TEMPLATE_TEXT, header))));
+        System.out.println(WebDriverManager.getText(homePage.textDescription_1));
+    }
+
+    @When("User see headers as {string}")
+    public void userSeeHeadersAs(String headerText) {
+        switch (headerText){
+            case "Leadership Development":
+                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.textDescription_1));
+                break;
+            case "Capability Building":
+                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.textDescription_2));
+                break;
+            case "Reward & Benefits":
+                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.textDescription_3));
+                break;
+            case "Employee & Industrial":
+                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.textDescription_4));
+                break;
+            case "Delivering Excellent":
+                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.textDescription_5));
+                break;
+        }
+    }
+
+    @Then("Verify {string} is displayed under header")
+    public void verifyIsDisplayedUnderHeader(String des) {
+        switch (des){
+            case "Leadership Development":
+                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.textDescription_1));
+                break;
+            case "Capability Building":
+                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.textDescription_2));
+                break;
+            case "Reward & Benefits":
+                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.textDescription_3));
+                break;
+            case "Employee & Industrial":
+                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.textDescription_4));
+                break;
+            case "Delivering Excellent":
+                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.textDescription_5));
+                break;
+        }
+    }
 
 
 }

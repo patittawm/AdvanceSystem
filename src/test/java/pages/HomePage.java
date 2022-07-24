@@ -11,8 +11,23 @@ public class HomePage {
         PageFactory.initElements(WebDriverManager.getDriver(), this);
     }
 
-//    @FindBy(id = "")
-//    public WebElement name;
+    @FindBy(xpath = "//*[@class='icon fa fa-angle-down']")
+    public WebElement dropdownLanguage;
+
+    @FindBy(xpath = "//div[@class='flex-box']/div[1]//div[@class='text']")
+    public WebElement textDescription_1;
+
+    @FindBy(xpath = "//div[@class='flex-box']/div[2]//div[@class='text']")
+    public WebElement textDescription_2;
+
+    @FindBy(xpath = "//div[@class='flex-box']/div[3]//div[@class='text']")
+    public WebElement textDescription_3;
+
+    @FindBy(xpath = "//div[@class='flex-box']/div[4]//div[@class='text']")
+    public WebElement textDescription_4;
+
+    @FindBy(xpath = "//div[@class='flex-box']/div[5]//div[@class='text']")
+    public WebElement textDescription_5;
 
 
 }
