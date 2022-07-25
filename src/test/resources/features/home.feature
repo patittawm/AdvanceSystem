@@ -58,7 +58,7 @@ Feature:Home page related scenarios
       | Employee & Industrial       |
       | Delivering Excellent        |
 
-  @ADVSYS-12
+  @ADVSYS-12 @smoke
   Scenario Outline: Verify 5 section displayed as a headers and descriptions under it.
     When User see headers as "<headerText>"
     Then Verify "<description>" is displayed under header
