@@ -58,3 +58,16 @@ Feature:Home page related scenarios
       | Reward & Benefits           |  Lorem Ipsum is simply dummy text of the printing and typesetting industry.              |
       | Employee & Industrial       |  Lorem Ipsum is simply dummy text of the printing and typesetting industry.              |
       | Delivering Excellent        |  Lorem Ipsum is simply dummy text of the printing and typesetting industry.              |
+
+  @ADVSYS-15
+  Scenario Outline: Following information should be displayed in footer section:
+    When User scrolls down page to footer information
+    Then Verify footer "<information>" is displayed
+    Examples:
+    |    information                                |
+    |    Address: 10090 Main St, Fairfax, VA        |
+    |    Phone: +1 703-831-3217                     |
+    |    Email: Info@advancesystems.us              |
+    |    Mon to Sat: 9.00 am to 5:00 pm             |
+
+
