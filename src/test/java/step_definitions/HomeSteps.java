@@ -51,42 +51,9 @@ public class HomeSteps implements CommonPage {
         Assert.assertEquals(title, WebDriverManager.getDriver().getTitle());
     }
 
-
-    @Then("Verify {string} headers is displayed")
-    public void verifyHeadersIsDisplayed(String header) {
-        Assert.assertTrue(WebDriverManager.isDisplayed(By.xpath(String.format(XPATH_TEMPLATE_TEXT, header))));
-    }
-
-    @And("Verify {string} descriptions under header")
-    public void verifyDescriptionsUnderHeader(String desc) {
-        WebDriverManager.getDriver().findElement(By.xpath(String.format(XPATH_TEMPLATE_TEXT, desc)));
-    }
-
-    @Then("Verify headers as {string} is displayed and description under")
-    public void verifyHeadersAsIsDisplayedAndDescriptionUnder(String header) {
-        Assert.assertTrue(WebDriverManager.isDisplayed(By.xpath(String.format(XPATH_TEMPLATE_TEXT, header))));
-        System.out.println(WebDriverManager.getText(homePage.textDescription_1));
-    }
-
     @When("User see headers as {string}")
-    public void userSeeHeadersAs(String headerText) {
-        switch (headerText){
-            case "Leadership Development":
-                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.textDescription_1));
-                break;
-            case "Capability Building":
-                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.textDescription_2));
-                break;
-            case "Reward & Benefits":
-                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.textDescription_3));
-                break;
-            case "Employee & Industrial":
-                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.textDescription_4));
-                break;
-            case "Delivering Excellent":
-                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.textDescription_5));
-                break;
-        }
+    public void userSeeHeadersAs(String h3Header) {
+        Assert.assertTrue(WebDriverManager.isDisplayed(By.xpath(String.format(XPATH_TEMPLATE_LINKTEXT_H3, h3Header))));
     }
 
     @Then("Verify {string} is displayed under header")

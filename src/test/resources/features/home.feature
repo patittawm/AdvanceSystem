@@ -47,23 +47,12 @@ Feature:Home page related scenarios
       | Join Us    | Advance Systems - Join       |
       | Contact Us | Advance Systems - Contact Us |
 
-  @ADVSYS-12 @smoke
-  Scenario Outline: Verify with 5 items section displayed as a headers and descriptions under it.
-    Then Verify headers as "<Header>" is displayed and description under
-    Examples:
-      | Header                      |
-      | Leadership Development      |
-      | Capability Building         |
-      | Reward & Benefits           |
-      | Employee & Industrial       |
-      | Delivering Excellent        |
-
-  @ADVSYS-12 @smoke
+  @ADVSYS-12
   Scenario Outline: Verify 5 section displayed as a headers and descriptions under it.
-    When User see headers as "<headerText>"
+    When User see headers as "<headerH3>"
     Then Verify "<description>" is displayed under header
     Examples:
-      | headerText                      | description |
+      | headerH3                      | description |
       | Leadership Development      |  Lorem Ipsum is simply dummy text of the printing and typesetting industry.             |
       | Capability Building         |  Lorem Ipsum is simply dummy text of the printing and typesetting industry.            |
       | Reward & Benefits           |  Lorem Ipsum is simply dummy text of the printing and typesetting industry.              |
