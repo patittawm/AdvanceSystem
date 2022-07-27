@@ -98,6 +98,18 @@ public class HomeSteps implements CommonPage {
 
         }
     }
+
+    @Then("Verify {string} button is displayed")
+    public void verifyButtonIsDisplayed(String joinnow) {
+        Assert.assertTrue(WebDriverManager.isDisplayed(By.xpath(String.format(XPATH_TEMPLATE_LINKTEXT, joinnow))));
+    }
+
+    @Then("User switches to {string} page")
+    public void userSwitchesToPage(String joinUs) {
+        Assert.assertTrue(WebDriverManager.isDisplayed(homePage.joinUsStickyHeaderLink));
+    }
+
+
 //Add comment for test how to make it work on git hub
 
 }

@@ -70,4 +70,11 @@ Feature:Home page related scenarios
     |    Email: Info@advancesystems.us              |
     |    Mon to Sat: 9.00 am to 5:00 pm             |
 
+  @ADVSYS-8
+  Scenario: Join Now button should above the main content of the home page.Button should take the user to "Join Us" page.
+    Then Verify "Join Now" button is displayed
+    When User clicks on "Join Now"
+    Then User switches to "Join Us" page
+
+
 

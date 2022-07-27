@@ -45,4 +45,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@class='list-info']//li[4]")
     public WebElement infoHour;
 
+    @FindBy(xpath = "//div[@class='sticky-header']//a[text()='Join Us']")
+    public WebElement joinUsStickyHeaderLink;
+
 }
