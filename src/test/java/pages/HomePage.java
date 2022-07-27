@@ -29,5 +29,20 @@ public class HomePage {
     @FindBy(xpath = "//div[@class='flex-box']/div[5]//div[@class='text']")
     public WebElement textDescription_5;
 
+    @FindBy(xpath = "//div[@class='footer-about footer-column-border col-lg-4 col-md-6 col-sm-6 col-xs-12']")
+    public WebElement footerInfo;
+
+    //============Information================
+    @FindBy(xpath = "//*[@class='list-info']//li[1]")
+    public WebElement infoAddress;
+
+    @FindBy(xpath = "//*[@class='list-info']//li[2]")
+    public WebElement infoPhone;
+
+    @FindBy(xpath = "//*[@class='list-info']//li[3]")
+    public WebElement infoEmail;
+
+    @FindBy(xpath = "//*[@class='list-info']//li[4]")
+    public WebElement infoHour;
 
 }

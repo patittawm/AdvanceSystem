@@ -76,6 +76,28 @@ public class HomeSteps implements CommonPage {
                 break;
         }
     }
+    @When("User scrolls down page to footer information")
+    public void userScrollsDownThePageToTheEnd() {
+        SeleniumUtils.moveIntoView(homePage.footerInfo);
+    }
+    @Then("Verify footer {string} is displayed")
+    public void verifySecondaryHeaderLinkIsDisplayed(String info) {
+        switch (info) {
+            case "Address: 10090 Main St, Fairfax, VA":
+                Assert.assertTrue(WebDriverManager.isEnabled(homePage.infoAddress));
+                break;
+            case "Phone: +1 703-831-3217":
+                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.infoPhone));
+                break;
+            case "Email: Info@advancesystems.us":
+                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.infoEmail));
+                break;
+            case "Mon to Sat: 9.00 am to 5:00 pm":
+                Assert.assertTrue(WebDriverManager.isDisplayed(homePage.infoHour));
+                break;
 
+        }
+    }
+//Add comment for test how to make it work on git hub
 
 }
